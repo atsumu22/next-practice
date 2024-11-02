@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/ban-types */
+// /* eslint-disable @typescript-eslint/ban-types */
+
+// styled-componentsのDefaultTheme型をAppThemeで拡張する。styled-components ver6系で必要。
+// declare module 'styled-components' {
+//   export interface DefaultTheme extends AppTheme {}
+// }
 import { theme } from '@/themes'
 import { Responsive, ResponsiveProp } from '@/types/styles'
 
 export type AppTheme = typeof theme
-
-// styled-componentsのDefaultTheme型をAppThemeで拡張する。
-declare module 'styled-components' {
-  export interface DefaultTheme extends AppTheme {}
-}
 
 type SpaceThemeKeys = keyof typeof theme.space
 type ColorThemeKeys = keyof typeof theme.colors
@@ -148,9 +148,7 @@ function isFontSizeThemeKeys(
   prop: any,
   theme: AppTheme,
 ): prop is FontSizeThemeKeys {
-  return (
-    Object.keys(theme.fontSizes).filter((key) => key == prop).length > 0
-  )
+  return Object.keys(theme.fontSizes).filter((key) => key == prop).length > 0
 }
 
 function isLetterSpacingThemeKeys(
@@ -166,8 +164,5 @@ function isLineHeightThemeKeys(
   prop: any,
   theme: AppTheme,
 ): prop is LineHeightThemeKeys {
-  return (
-    Object.keys(theme.lineHeights).filter((key) => key == prop).length > 0
-  )
+  return Object.keys(theme.lineHeights).filter((key) => key == prop).length > 0
 }
-

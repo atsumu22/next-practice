@@ -8,8 +8,8 @@ export type BoxProps = {
   backgroundColor?: Responsive<Color>
   width?: Responsive<string>
   height?: Responsive<string>
-  minWidth?: Responsive<string>
-  minHeight?: Responsive<string>
+  minWidth?: Responsive<string | number>
+  minHeight?: Responsive<string | number>
   display?: Responsive<string>
   border?: Responsive<string>
   overflow?: Responsive<string>

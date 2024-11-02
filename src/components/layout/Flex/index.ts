@@ -1,4 +1,6 @@
 /* eslint-disable prettier/prettier */
+import styled from 'styled-components'
+import Box, { BoxProps } from '@/components/layout/Box'
 import type {
   Responsive,
   CSSPropertyAlignContent,
@@ -9,10 +11,8 @@ import type {
   CSSPropertyFlexDirection,
   CSSPropertyJustifySelf,
   CSSPropertyAlignSelf,
-} from "@/types/styles"
-import styled from "styled-components"
-import Box, { BoxProps } from "@/components/layout/Box"
-import { toPropValue } from "@/utils/styles"
+} from '@/types/styles'
+import { toPropValue } from '@/utils/styles'
 
 
 type FlexProps = BoxProps & {
@@ -31,6 +31,7 @@ type FlexProps = BoxProps & {
 }
 
 const Flex = styled(Box)<FlexProps>`
+  display: flex;
   ${(props) => toPropValue('align-items', props.alignItems, props.theme)}
   ${(props) => toPropValue('align-content', props.alignContent, props.theme)}
   ${(props) => toPropValue('justify-content', props.justifyContent, props.theme)}
@@ -45,8 +46,9 @@ const Flex = styled(Box)<FlexProps>`
   ${(props) => toPropValue('order', props.order, props.theme)}
 `
 
-Flex.defaultProps = {
-  display: 'flex',
-}
+// この書き方は非推奨
+// Flex.defaultProps = {
+//   display: 'flex',
+// }
 
 export default Flex

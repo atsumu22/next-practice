@@ -1,3 +1,4 @@
+// /* eslint-disable @typescript-eslint/ban-types */
 
 export type ResponsiveProp<T> = {
   base?: T
@@ -85,7 +86,7 @@ export type CSSPropertyFlexDirection =
   | 'row'
   | 'row-reverse'
 
-  export type CSSPropertyJustifySelf =
+export type CSSPropertyJustifySelf =
   | CSSPropertyGlobals
   | SelfPosition
   | 'auto'

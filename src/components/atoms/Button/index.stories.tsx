@@ -1,9 +1,9 @@
+import { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
-import { Meta, StoryFn, StoryObj } from '@storybook/react'
 import Button from './index'
 
 export default {
-  title: 'Button',
+  title: 'Atoms/Button',
   component: Button,
   argTypes: {
     variant: {

@@ -12,7 +12,7 @@ export type User = {
 
 export type Product = {
   id: number
-  categories: Category
+  category: Category
   title: string
   description: string
   imageUrl: string
